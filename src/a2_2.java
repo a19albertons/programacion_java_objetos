@@ -8,25 +8,25 @@ public class a2_2 {
         System.out.println(appcfg.getAppTitle());
     }
 }
-class AppConfig {
-    private String appTitle;
-    private static AppConfig instance=null;
-
-    public static AppConfig getInstance() {
-        if (instance == null){
-            instance= new AppConfig();
-        }
-        return instance;
-    }
-
-    public String getAppTitle() {
-        return appTitle;
-    }
-
-    public void setAppTitle(String appTitle) {
-        this.appTitle = appTitle;
-    }
-    private AppConfig(){
-        appTitle ="Mi Aplicación";
-    }
-}
+//class AppConfig {
+//    private String appTitle;
+//    private static AppConfig instance=null;
+//
+//    public static AppConfig getInstance() {
+//        if (instance == null){
+//            instance= new AppConfig();
+//        }
+//        return instance;
+//    }
+//
+//    public String getAppTitle() {
+//        return appTitle;
+//    }
+//
+//    public void setAppTitle(String appTitle) {
+//        this.appTitle = appTitle;
+//    }
+//    private AppConfig(){
+//        appTitle ="Mi Aplicación";
+//    }
+//}

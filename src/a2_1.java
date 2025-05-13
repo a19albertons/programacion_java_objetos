@@ -17,46 +17,46 @@ public class a2_1 {
         System.out.println(dinero3);
     }
 }
-abstract class Dinero {
-    int cantidad;
-
-    public Dinero(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    static Dinero getInstance(int cantidad, String pais) {
-        if (pais.equals("España") || pais.equals("Portugal") || pais.equals("Italia")) {
-            return new DineroEuropeo(cantidad);
-        } else {
-            return new DineroUSA(cantidad);
-        }
-    }
-
-    abstract String getSimbolo();
-    public String toString(){
-        return cantidad+getSimbolo();
-    }
-}
-
-class DineroEuropeo extends Dinero {
-
-    public DineroEuropeo(int cantidad) {
-        super(cantidad);
-    }
-    @Override
-    String getSimbolo(){
-        return "€";
-    }
-
-}
-
-class DineroUSA extends Dinero {
-
-    public DineroUSA(int cantidad) {
-        super(cantidad);
-    }
-    @Override
-    String getSimbolo(){
-        return "$";
-    }
-}
+//abstract class Dinero {
+//    int cantidad;
+//
+//    public Dinero(int cantidad) {
+//        this.cantidad = cantidad;
+//    }
+//
+//    static Dinero getInstance(int cantidad, String pais) {
+//        if (pais.equals("España") || pais.equals("Portugal") || pais.equals("Italia")) {
+//            return new DineroEuropeo(cantidad);
+//        } else {
+//            return new DineroUSA(cantidad);
+//        }
+//    }
+//
+//    abstract String getSimbolo();
+//    public String toString(){
+//        return cantidad+getSimbolo();
+//    }
+//}
+//
+//class DineroEuropeo extends Dinero {
+//
+//    public DineroEuropeo(int cantidad) {
+//        super(cantidad);
+//    }
+//    @Override
+//    String getSimbolo(){
+//        return "€";
+//    }
+//
+//}
+//
+//class DineroUSA extends Dinero {
+//
+//    public DineroUSA(int cantidad) {
+//        super(cantidad);
+//    }
+//    @Override
+//    String getSimbolo(){
+//        return "$";
+//    }
+//}
