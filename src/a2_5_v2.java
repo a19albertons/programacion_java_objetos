@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 interface AlertaObservable {
@@ -64,7 +65,10 @@ interface UnidadEmergencia {
     }
 }
 class Policia implements UnidadEmergencia {
-
+    @Override
+    public void actualizar(){
+        System.out.println("Policía" + base);
+    }
 }
 class Ambulancia implements UnidadEmergencia {
 
@@ -79,6 +83,19 @@ class Psicologos implements UnidadEmergencia {
     String mensaje;
     public Psicologos(String mensaje) {
         this.mensaje = mensaje;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Psicologos that = (Psicologos) o;
+        return Objects.equals(mensaje, that.mensaje);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(mensaje);
     }
 }
 
